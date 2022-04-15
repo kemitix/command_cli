@@ -4,19 +4,18 @@ import 'error_command.dart';
 import 'help_command.dart';
 
 class CommandCli {
-  final List<String> _arguments;
-  final List<Command> _commands;
-
-  CommandCli(this._arguments, this._commands) {
+  CommandCli(this._arguments) {
     _instance = this;
   }
+
+  final List<String> _arguments;
 
   static CommandCli? _instance;
   static CommandCli? get to => _instance;
 
   static List<String> get arguments => to!._arguments;
 
-  Command findCommand() => _findCommand(0, _commands);
+  Command findCommand(List<Command> commands) => _findCommand(0, commands);
 
   Command _findCommand(int currentIndex, List<Command> commands) {
     try {

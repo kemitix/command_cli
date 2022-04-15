@@ -1,4 +1,5 @@
 import 'command.dart';
+import 'log_service.dart';
 
 class ErrorCommand extends Command {
   @override
@@ -7,8 +8,8 @@ class ErrorCommand extends Command {
   ErrorCommand(this.error);
   @override
   Future<void> execute() async {
-    //LogService.error(error);
-    //LogService.info('run `get help` to help', false, false);
+    LogService.error(error);
+    LogService.info('run with `help` to help', false, false);
   }
 
   @override
@@ -24,10 +25,8 @@ class ErrorCommand extends Command {
   bool validate() => true;
 
   @override
-  // TODO: implement alias
-  get alias => throw UnimplementedError();
+  get alias => const [];
 
   @override
-  // TODO: implement children
-  get children => throw UnimplementedError();
+  get children => const [];
 }

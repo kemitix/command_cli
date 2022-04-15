@@ -15,7 +15,7 @@ class HelpCommand extends Command {
   Future<void> execute() async {
     final commandsHelp = _getCommandsHelp(_commands, 0);
     LogService.info('''
-List available commands:
+List of available commands:
 $commandsHelp
 ''');
   }

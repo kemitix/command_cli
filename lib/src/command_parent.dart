@@ -2,9 +2,14 @@ import 'command.dart';
 
 class CommandParent extends Command {
   final String _name;
-  final List<String> _alias;
   final List<Command> _children;
-  CommandParent(this._name, this._children, [this._alias = const []]);
+  late List<String> _alias;
+  late String _hint;
+  CommandParent(this._name, this._children,
+      {List<String> alias = const [], String hint = ''}) {
+    _alias = alias;
+    _hint = hint;
+  }
 
   @override
   String get commandName => _name;
@@ -17,7 +22,7 @@ class CommandParent extends Command {
   Future<void> execute() async {}
 
   @override
-  String get hint => '';
+  String get hint => _hint;
 
   @override
   bool validate() => true;

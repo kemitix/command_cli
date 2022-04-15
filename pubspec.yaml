@@ -1,4 +1,4 @@
-name: command_dart
+name: command_cli
 description: Library for creating cli tools that parses commands from arguments
 version: 1.0.0
 homepage: https://github.com/kemitix/command_dart

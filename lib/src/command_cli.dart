@@ -40,7 +40,7 @@ class CommandCli {
       return command;
       // ignore: avoid_catching_errors
     } on RangeError catch (_) {
-      return HelpCommand();
+      return HelpCommand(commands);
     } on Exception catch (_) {
       rethrow;
     }

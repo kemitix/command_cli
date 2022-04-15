@@ -1,9 +1,27 @@
-import 'package:command_dart/src/command.dart';
+import 'command.dart';
 
 class ErrorCommand extends Command {
-  final String _message;
+  @override
+  String get commandName => 'onerror';
+  String error;
+  ErrorCommand(this.error);
+  @override
+  Future<void> execute() async {
+    //LogService.error(error);
+    //LogService.info('run `get help` to help', false, false);
+  }
 
-  ErrorCommand(this._message);
+  @override
+  String get hint => 'Print on error';
+
+  @override
+  String get codeSample => '';
+
+  @override
+  int get maxParameters => 0;
+
+  @override
+  bool validate() => true;
 
   @override
   // TODO: implement alias
@@ -12,20 +30,4 @@ class ErrorCommand extends Command {
   @override
   // TODO: implement children
   get children => throw UnimplementedError();
-
-  @override
-  // TODO: implement commandName
-  get commandName => throw UnimplementedError();
-
-  @override
-  Future<void> execute() {
-    // TODO: implement execute
-    throw UnimplementedError();
-  }
-
-  @override
-  bool validate() {
-    // TODO: implement validate
-    throw UnimplementedError();
-  }
 }

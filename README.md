@@ -8,10 +8,8 @@ Most of the code is extracted and adapted from the [GetCLI v1.7.1](https://pub.d
 
 # Example
 
-Run the demo:
-
 ```bash
-$ dart run example/demo.dart
+$ dart run example/main.dart
 
 List of available commands:
 
@@ -25,13 +23,13 @@ List of available commands:
 ```
 
 ```bash
-$ dart run example/demo.dart foo
+$ dart run example/main.dart foo
 
 This is FOO!
 ```
 
 ```bash
-$ dart run example/demo.dart baz
+$ dart run example/main.dart baz
 
 List of available commands:
 
@@ -42,7 +40,7 @@ List of available commands:
 ```
 
 ```bash
-$ dart run example/demo.dart baz bazzy barffy
+$ dart run example/main.dart baz bazzy barffy
 
 This is Baz Bazzy Barffy
 ```

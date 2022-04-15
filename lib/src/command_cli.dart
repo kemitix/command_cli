@@ -4,6 +4,7 @@ import 'error_command.dart';
 import 'help_command.dart';
 
 class CommandCli {
+  /// Pass in arguments passed to main()
   CommandCli(this._arguments) {
     _instance = this;
   }
@@ -15,6 +16,7 @@ class CommandCli {
 
   static List<String> get arguments => to!._arguments;
 
+  /// Pass in the list of available commands and return the one that matches the arguments
   Command findCommand(List<Command> commands) => _findCommand(0, commands);
 
   Command _findCommand(int currentIndex, List<Command> commands) {

@@ -1,6 +1,7 @@
 import 'command.dart';
 import 'log_service.dart';
 
+/// Simple error handler - displays the error
 class ErrorCommand extends Command {
   @override
   String get commandName => 'onerror';

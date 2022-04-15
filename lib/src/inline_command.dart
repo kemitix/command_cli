@@ -1,5 +1,6 @@
 import 'command.dart';
 
+/// Simple declaration of a command
 class InlineCommand extends Command {
   late final String _commandName;
   String? _hint;

@@ -1,6 +1,7 @@
 import 'command.dart';
 import 'log_service.dart';
 
+/// Simple help displays the available commands
 class HelpCommand extends Command {
   final List<Command> _commands;
   HelpCommand(this._commands);

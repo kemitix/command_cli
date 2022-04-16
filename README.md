@@ -1,4 +1,9 @@
-# command_cli
+**DEPRECATED** Library for creating cli tools that parses commands from arguments
+
+> This library is deprecated in favour of using the `CommandRunner` from the [args](https://pub.dev/packages/args) package.
+
+> While researching for existing libraries that provided this functionality, I missed `CommandRunner` when looking
+at `args` as there was no reference to it until about halfway down the page. And, yes, it was the day after I published this, my first dart package, that I discovered `CommandRunner`.
 
 Library for creating cli tools that parses commands from arguments
 
